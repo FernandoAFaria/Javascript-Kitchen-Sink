@@ -7,8 +7,10 @@ window.addEventListener('DOMContentLoaded', function(){
     button.appendChild(document.createTextNode('Add Square'));
     button.classList.add('btn');
     document.body.appendChild(button);
+    document.body.appendChild(document.createElement('div'));
 //Adding listener if button is clicked//
     button.addEventListener('click', addSquare);
+
 
 
 //Functions below//
@@ -17,7 +19,7 @@ function addSquare(){
     let newDiv = document.createElement('div');
     newDiv.classList.add('blackBox');
     newDiv.id = numOfSquares;
-    document.body.appendChild(newDiv);
+    document.querySelector('div').appendChild(newDiv);
     
     //Mouse hover on black boxes//
     let blackbox = document.getElementsByClassName('blackBox');
