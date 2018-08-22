@@ -53,7 +53,8 @@ function removeSquare(){
     
     }    else {
         try{
-        this.previousSibling.remove()
+        this.previousSibling.remove();
+            numOfSquares = numOfSquares - 1;
         }
         catch(error){
             alert('no squares before this ')

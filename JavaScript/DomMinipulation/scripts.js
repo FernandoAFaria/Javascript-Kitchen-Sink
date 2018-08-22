@@ -33,9 +33,41 @@ div.appendChild(h4);
 div.appendChild(h5);
 div.appendChild(h6);
 
+let count = 1;
+document.getElementById('btn').addEventListener('click', function(){
+        let insert = document.createElement('li');
+
+        insert.appendChild(document.createTextNode(`This is item ${count}`));
+
+        randomNum = Math.floor(Math.random()* 9);
+        console.log(randomNum);
+        insert.style.color = colors[randomNum];
+
+        document.body.appendChild(insert);
+        insert.addEventListener('click', function(){
+            insert.remove();
+        })
+        count++;
+})
 
 
-document.body.appendChild(div);
+let colors = ['coral', 'purple', 'blue', 'red', 'green', 'pink', 'black', 'yellow', 'lightblue'];
+
+
+
+
+
+
+// h3.addEventListener('click', function(){
+// randomNum = Math.floor(Math.random()* 9);
+// console.log(randomNum);
+// h1.style.color = colors[randomNum];
+// })
+
+
+
+
+// document.body.appendChild(div);
 });
 
 
